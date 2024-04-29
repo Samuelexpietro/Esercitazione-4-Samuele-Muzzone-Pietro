@@ -1,0 +1,260 @@
+body {
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    padding: 0;
+    max-width: 1200px;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #3f3f3f;
+    padding: 20px 20px 20px 20px;
+}
+
+header p {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+header a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+section.hero ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.hero h2 {
+     font-weight: lighter;
+}
+
+section.hero img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    padding: 0;
+    margin: auto;
+}
+
+div.info h1 {
+    padding-left: 20px;
+}
+
+div.artistiinmostra {
+    padding-left: 20px;
+}
+
+
+div.info p {
+    max-width: 850px;
+    line-height: 140%;
+    padding-left: 30px;
+}
+
+section.content {
+    padding-bottom: 64px;
+}
+
+section.content h1 {
+    font-size: 36px;
+    padding-left: 35px;
+    font-weight: lighter;
+}
+
+section.content p {
+    line-height: 140%;
+    padding-left: 400px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+section.content img {
+    width: 250px;
+    height: 250px;
+    padding-left: 35px;
+    padding-top: 35px;
+}
+
+section.content div {
+    display: flex;
+}
+
+section.content h3 {
+    font-weight: lighter;
+    padding-left: 20px;
+}
+
+section.artist div {
+    display: flex;
+    gap: 400px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+section.artist p {
+    line-height: 140%;
+}
+
+section.artist h1 {
+    padding-left: 25px;
+}
+
+section.artist h2 {
+    font-weight: lighter;
+}
+
+section.operine {
+    display: flex;
+    flex-direction: 2 column;
+    max-width: 1100px;
+    margin: 48px auto;
+    gap: 40px;
+    padding: 0px 30px;
+}
+
+
+section.operine img {
+    height: 325px;
+    width: 325px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border-radius: 7px 7px 7px 7px;
+}
+
+section.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    max-width: 1100px;
+    margin: 48px auto;
+    gap: 35px;
+    padding: 0px 30px;
+}
+
+
+section.card img {
+    height: 225px;
+    width: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border-radius: 7px 7px 0 0;
+}
+
+
+section.card p {
+    font-size: 18px;
+    color: #ffffff;
+    padding: 10px;
+    margin: 0 auto 0;
+}
+
+section.card div {
+    background-color: #3f3f3f;
+    border-radius: 8px;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+footer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px;
+    background-color: #3f3f3f;
+}
+footer ul a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width:800px) {
+
+    header p, header nav ul {
+        font-size: small
+    }
+
+    section.hero h2 {
+        font-size: 15px;
+    }
+
+    div.info h1 {
+        font-size: 24px;
+    }
+
+    div.info p {
+        font-size: 15px;
+    }
+
+    section.card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.content div {
+        gap: 30px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    section.content p {
+        line-height: 140%;
+        padding-bottom: 16px;
+        font-size: 12px;
+        margin: 15px;
+        padding: 0;
+        
+    }
+    
+    section.content img {
+        width: 200px;
+        height: 200px;
+        padding-left: 35px;
+        padding-top: 35px;
+    }
+
+    section.artist div {
+        gap: 30px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    section.operine {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+}
+
