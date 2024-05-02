@@ -41,41 +41,72 @@
             <h2>Opere</h2>
         </div>
     </section>
-    <section class="operine">
+    <div class="operine" id="zoom">
         <div>
-            <img src="immagini/paul-blow/Paul4.jpg" alt="">
+            <a href="#"><img src="immagini/paul-blow/Paul1.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/paul-blow/Paul1.jpg" alt="">
+            <a href="#"><img src="immagini/paul-blow/Paul2.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/paul-blow/Paul2.jpg" alt="">
+            <a href="#"><img src="immagini/paul-blow/Paul3.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/paul-blow/Paul3.jpg" alt="">
+            <a href="#"><img src="immagini/paul-blow/Paul4.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/paul-blow/Paul4.jpg" alt="">
+            <a href="#"><img src="immagini/paul-blow/Paul5.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/paul-blow/Paul5.jpg" alt="">
+            <a href="#"><img src="immagini/paul-blow/Paul6.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/paul-blow/Paul6.jpg" alt="">
+            <a href="#"><img src="immagini/paul-blow/Paul7.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/paul-blow/Paul7.jpg" alt="">
+            <a href="#"><img src="immagini/paul-blow/Paul8.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/paul-blow/Paul8.jpg" alt="">
-        </div> 
-        <div>
-            <img src="immagini/paul-blow/Paul9.jpg" alt="">
+            <a href="#"><img src="immagini/paul-blow/Paul10.jpg" alt=""></a>
         </div>
-        <div>
-            <img src="immagini/paul-blow/Paul10.jpg" alt="">
-        </div>
-    </section>
+        
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+     const links = document.querySelectorAll('#zoom a');
+ 
+     links.forEach(link => {
+         link.addEventListener('click', function(e) {
+             e.preventDefault(); 
+ 
+             const parentDiv = this.parentNode;
+             const container = document.getElementById('zoom');
+             const allDivs = container.querySelectorAll('div');
+ 
+             if (!container.classList.contains('attivo')) {
+                 container.classList.add('attivo');
+             }
+ 
+             if (parentDiv.classList.contains('active')) {
+                 allDivs.forEach(div => {
+                     div.classList.remove('active');
+                     div.style.width = ''; 
+                 });
+                 container.classList.remove('attivo'); 
+             } else {
+                 allDivs.forEach(div => {
+                     div.classList.remove('active');
+                     div.style.width = '100px';  
+                 });
+ 
+                 parentDiv.classList.add('active');
+                 parentDiv.style.width = '500px'; 
+             }
+         });
+     });
+ });
+     </script>
 <footer>
     <ul>
         <li><a href="">Privacy</a></li>

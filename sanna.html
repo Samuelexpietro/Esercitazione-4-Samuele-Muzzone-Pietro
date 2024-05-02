@@ -40,50 +40,72 @@
             <h2>Opere</h2>
         </div>
     </section>
-    <section class="operine">
+    <div class="operine" id="zoom">
         <div>
-            <img src="immagini/sanna-mander/Sanna1.jpg" alt="">
+            <a href="#"><img src="immagini/sanna-mander/Sanna1.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/sanna-mander/Sanna2.jpg" alt="">
+            <a href="#"><img src="immagini/sanna-mander/Sanna2.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/sanna-mander/Sanna3.jpg" alt="">
+            <a href="#"><img src="immagini/sanna-mander/Sanna3.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/sanna-mander/Sanna4.jpg" alt="">
+            <a href="#"><img src="immagini/sanna-mander/Sanna4.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/sanna-mander/Sanna5.jpg" alt="">
+            <a href="#"><img src="immagini/sanna-mander/Sanna5.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/sanna-mander/Sanna6.jpg" alt="">
+            <a href="#"><img src="immagini/sanna-mander/Sanna6.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/sanna-mander/Sanna7.jpg" alt="">
+            <a href="#"><img src="immagini/sanna-mander/Sanna7.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/sanna-mander/Sanna8.jpg" alt="">
+           <a href="#"><img src="immagini/sanna-mander/Sanna8.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/sanna-mander/Sanna9.jpg" alt="">
-        </div> 
-        <div>
-            <img src="immagini/sanna-mander/Sanna10.jpg" alt="">
-        </div>
-        <div>
-            <img src="immagini/sanna-mander/Sanna11.jpg" alt="">
-        </div>
-        <div>
-            <img src="immagini/sanna-mander/Sanna12.jpg" alt="">
-        </div>
-        <div>
-            <img src="immagini/sanna-mander/Sanna13.jpg" alt="">
-        </div>
-        <div>
-            <img src="immagini/sanna-mander/Sanna14.jpg" alt="">
-        </div>
-    </section>
+            <a href="#"><img src="immagini/sanna-mander/Sanna9.jpg" alt=""></a>
+         </div>
+    
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+     const links = document.querySelectorAll('#zoom a');
+ 
+     links.forEach(link => {
+         link.addEventListener('click', function(e) {
+             e.preventDefault(); 
+ 
+             const parentDiv = this.parentNode;
+             const container = document.getElementById('zoom');
+             const allDivs = container.querySelectorAll('div');
+ 
+             if (!container.classList.contains('attivo')) {
+                 container.classList.add('attivo');
+             }
+ 
+             if (parentDiv.classList.contains('active')) {
+                 allDivs.forEach(div => {
+                     div.classList.remove('active');
+                     div.style.width = ''; 
+                 });
+                 container.classList.remove('attivo'); 
+             } else {
+                 allDivs.forEach(div => {
+                     div.classList.remove('active');
+                     div.style.width = '100px';  
+                 });
+ 
+                 parentDiv.classList.add('active');
+                 parentDiv.style.width = '500px'; 
+             }
+         });
+     });
+ });
+     </script>
 <footer>
     <ul>
         <li><a href="">Privacy</a></li>

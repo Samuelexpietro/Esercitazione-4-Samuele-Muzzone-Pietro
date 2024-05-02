@@ -45,53 +45,72 @@
             <h2>Opere</h2>
         </div>
     </section>
-    <section class="operine">
+    <div class="operine" id="zoom">
         <div>
-            <img src="immagini/Icinori/Icinori1.jpg" alt="">
+            <a href="#"><img src="immagini/Icinori/Icinori11.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/Icinori/Icinori2.jpg" alt="">
+            <a href="#"><img src="immagini/Icinori/Icinori12.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/Icinori/Icinori3.jpg" alt="">
+            <a href="#"><img src="immagini/Icinori/Icinori3.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/Icinori/Icinori4.jpg" alt="">
+            <a href="#"><img src="immagini/Icinori/Icinori4.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/Icinori/Icinori5.jpg" alt="">
+            <a href="#"><img src="immagini/Icinori/Icinori5.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/Icinori/Icinori6.jpg" alt="">
+            <a href="#"><img src="immagini/Icinori/Icinori6.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/Icinori/Icinori7.jpg" alt="">
+            <a href="#"><img src="immagini/Icinori/Icinori7.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/Icinori/Icinori8.jpg" alt="">
+           <a href="#"><img src="immagini/Icinori/Icinori8.jpg" alt=""></a>
         </div>
         <div>
-            <img src="immagini/Icinori/Icinori9.jpg" alt="">
-        </div> 
-        <div>
-            <img src="immagini/Icinori/Icinori10.jpg" alt="">
-        </div>
-        <div>
-            <img src="immagini/Icinori/Icinori11.jpg" alt="">
-        </div>
-        <div>
-            <img src="immagini/Icinori/Icinori12.jpg" alt="">
-        </div>
-        <div>
-            <img src="immagini/Icinori/Icinori13.jpg" alt="">
-        </div>
-        <div>
-            <img src="immagini/Icinori/Icinori14.jpg" alt="">
-        </div>
-        <div>
-            <img src="immagini/Icinori/Icinori15.jpg" alt="">
-        </div>
-    </section>
+            <a href="#"><img src="immagini/Icinori/Icinori9.jpg" alt=""></a>
+         </div>
+    
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+     const links = document.querySelectorAll('#zoom a');
+ 
+     links.forEach(link => {
+         link.addEventListener('click', function(e) {
+             e.preventDefault(); 
+ 
+             const parentDiv = this.parentNode;
+             const container = document.getElementById('zoom');
+             const allDivs = container.querySelectorAll('div');
+ 
+             if (!container.classList.contains('attivo')) {
+                 container.classList.add('attivo');
+             }
+ 
+             if (parentDiv.classList.contains('active')) {
+                 allDivs.forEach(div => {
+                     div.classList.remove('active');
+                     div.style.width = ''; 
+                 });
+                 container.classList.remove('attivo'); 
+             } else {
+                 allDivs.forEach(div => {
+                     div.classList.remove('active');
+                     div.style.width = '100px';  
+                 });
+ 
+                 parentDiv.classList.add('active');
+                 parentDiv.style.width = '500px'; 
+             }
+         });
+     });
+ });
+     </script>
 <footer>
     <ul>
         <li><a href="">Privacy</a></li>
