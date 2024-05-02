@@ -292,24 +292,5 @@ footer ul a {
         align-items: center;
     }
 
-    div.operine img {
-        height: 100%;
-        width: 350px;
-        object-fit: cover;
-    }
-
-    .operine.attivo div {
-        height: 100%;
-        width: 350px;
-        object-fit: cover;
-        transition: all 0.2s;
-    }
-
-    .operine.attivo div.active {
-        height: 100%;
-        width: 350px;
-        object-fit: cover;
-        transition: all 0.2s;
-}
 
 }
